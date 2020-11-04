@@ -1,6 +1,6 @@
 # healthchecks_service_ps
 
-Powershell script to install a service to check in with healthchecks once a minute.
+Powershell script to install a service to check in with healthchecks once a minute on Windows.
 
 
 Created by:    Bo Saurage
