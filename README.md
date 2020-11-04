@@ -1,4 +1,4 @@
-# healthchecks_service
+# healthchecks_service_ps
 
 Powershell script to install a service to check in with healthchecks once a minute.
 
