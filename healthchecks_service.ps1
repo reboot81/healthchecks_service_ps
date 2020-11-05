@@ -6,7 +6,7 @@ Creates a service to check in with healthchecks once a minute.
 Created by:    Bo Saurage
 Created on:    2020-11-03
 Filename:      healthchecks_service.ps1
-Organization:  AniCura Bohusläns Djursjukhus
+Organization:  
 .DESCRIPTION
 ===========================================================================
 Downloads NSSM, installs it. You provide your healthchecks API key, a request is made for a unique url.
