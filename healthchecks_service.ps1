@@ -5,7 +5,6 @@ Creates a service to check in with healthchecks once a minute.
 ===========================================================================
 Created by:    Bo Saurage
 Created on:    2020-11-03
-Updated on:    2025-07-13
 Filename:      healthchecks_service.ps1
 Organization:  
 .DESCRIPTION
@@ -13,11 +12,15 @@ Organization:
 Downloads NSSM, installs it. You provide your healthchecks API key, a request is made for a unique url.
 A ps1 file is written to disk and a service is set up to run this at an interval of your choosing.
 Finally you get to open the checks webpage where you enable notifications.
+
+To list active NSSM services:
+Get-WmiObject Win32_Service | Where-Object { $_.PathName -match "nssm.exe" } | Select-Object Name, DisplayName, State, PathName
+To remove 
+sc.exe delete "healthchecks"
 .LINK
 https://healthchecks.io/
 .INPUTS
 
-None.
 #>
 
 #Elevate to Administrator
