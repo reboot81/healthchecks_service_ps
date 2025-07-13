@@ -46,7 +46,7 @@ Add-Type -AssemblyName PresentationFramework
 
 # Download and install NSSM
 try {
-    $tmp = New-TemporaryFile | Rename-Item -NewName { $_ -replace 'tmp$', 'zip' } –PassThru
+    $tmp = New-TemporaryFile | Rename-Item -NewName { $_ -replace 'tmp$', 'zip' } -PassThru
     #download
     Invoke-WebRequest -OutFile $tmp $url
     #exract to same folder 
@@ -134,7 +134,7 @@ catch {
 #Create a Windows serive
 Try {
     $NSSMPath = (Get-Command "C:\Program files\nssm-2.24\win64\nssm.exe").Source
-    $NewServiceName = “healthchecks”
+    $NewServiceName = "healthchecks"
     $PoShPath = (Get-Command powershell).Source
     $PoShScriptPath = "`"$hc_url_script`""
     $args1 = '-ExecutionPolicy Bypass -NoProfile -File "{0}"' -f $PoShScriptPath
@@ -179,7 +179,7 @@ switch ($msgBoxInput) {
         #Launch browser
         $hc_id = $hc_url -replace 'https://hc-ping.com/', ''
         $hc_check_url = "https://healthchecks.io/checks/" + $hc_id + "/details/"
-        Invoke-Expression “cmd.exe /C start $hc_check_url”
+        Invoke-Expression "cmd.exe /C start $hc_check_url"
     }
     'No' {
         #Ok...
