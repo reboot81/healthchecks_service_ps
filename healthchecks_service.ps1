@@ -1,10 +1,11 @@
-﻿<# 
+ <# 
 .Synopsis
 Creates a service to check in with healthchecks once a minute.
 .NOTES
 ===========================================================================
 Created by:    Bo Saurage
 Created on:    2020-11-03
+Updated on:    2025-07-13
 Filename:      healthchecks_service.ps1
 Organization:  
 .DESCRIPTION
@@ -189,4 +190,4 @@ switch ($msgBoxInput) {
         # Do something
     }
 }
-exit 
+exit  
